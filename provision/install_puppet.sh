@@ -184,7 +184,7 @@ ensure_puppet() {
       if ! is_installed "puppetlabs-release" ; then
         echo "Puppetlabs repository not detected. Installing..."
 
-        REPO_URL="https://apt.puppetlabs.com/puppetlabs-release-${PSUEDONAME}.deb"
+        REPO_URL="https://apt.puppetlabs.com/puppet-release-${PSUEDONAME}.deb"
         repo_path=$(mktemp)
         wget --quiet --output-document=${repo_path} ${REPO_URL}
         dpkg --install ${repo_path}
